@@ -1,0 +1,107 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://i.pinimg.com/736x/28/63/f1/2863f1ba97b2acb9f191587bdea9e39f.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 20px;
+      max-width: 980px;
+      width: 100%;
+      padding: 40px;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      color: #002b5c;
+      font-size: 30px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      margin: 25px 0 20px;
+      border-bottom: 2px solid #ccc;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: 10px 25px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #0077b6;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .tab:hover, .tab.active {
+      color: #001d3d;
+      border-bottom: 3px solid #0077b6;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    select, input, textarea, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+      transition: border-color 0.2s ease;
+    }
+
+    select:focus, input:focus, textarea:focus {
+      border-color: #0077b6;
+      outline: none;
+    }
+
+    button {
+      background-color: #0077b6;
+      color: white;
+      margin-top: 20px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #023e8a;
+    }
+
+    .form-section {
+      display: none;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .tabs {
+        flex-direction: column;
+      }
+      .tab {
+        padding: 10px;
+        text-align: center;
+      }
+    }
